@@ -5,7 +5,6 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
-import tconstruct.library.util.CoordTuple;
 import crystal.CrystalContent;
 
 public class TerraleecherLogic extends TileEntity

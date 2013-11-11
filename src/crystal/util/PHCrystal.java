@@ -4,10 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 import net.minecraftforge.common.Configuration;
-
 import cpw.mods.fml.common.FMLCommonHandler;
-
-import tconstruct.TConstruct;
 
 public class PHCrystal
 {
