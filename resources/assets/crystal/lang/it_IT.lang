@@ -1,0 +1,17 @@
+itemGroup.crystalclimate=Crystal Climate
+
+tile.extractor.essence.name=Estrattore di Essenza
+
+tile.terraformer.freezer.name=Terragelatore
+tile.terraformer.fumer.name=Terrafumatore
+tile.terraformer.waver.name=Terraondatore
+tile.terraformer.leecher.name=Terrasucchiatore
+tile.terraformer.grower.name=Terracrescitore
+tile.terraformer.nether.name=Terranether
+tile.terraformer.lighter.name=Terralucitore
+tile.terraformer.crystal.name=Terracristallatore
+
+tile.ash.name=Ceneri
+tile.stone.leeched.name=Leeched Grezzo
+
+item.crystal.essence.name=Cristallo di Essenza Purificato
