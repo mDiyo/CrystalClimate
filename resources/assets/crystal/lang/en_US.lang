@@ -1,0 +1,17 @@
+itemGroup.crystalclimate=Crystal Climate
+
+tile.extractor.essence.name=Essence Extractor
+
+tile.terraformer.freezer.name=Terrafreezer
+tile.terraformer.fumer.name=Terrafumer
+tile.terraformer.waver.name=Terrawaver
+tile.terraformer.leecher.name=Terraleecher
+tile.terraformer.grower.name=Terragrower
+tile.terraformer.nether.name=Terranether
+tile.terraformer.lighter.name=Terralighter
+tile.terraformer.crystal.name=Terracrystal
+
+tile.ash.name=Ash
+tile.stone.leeched.name=Leeched Ore
+
+item.crystal.essence.name=Purified Essence Crystal
