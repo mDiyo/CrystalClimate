@@ -13,8 +13,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import crystal.CrystalClimate;
-import crystal.block.logic.TerraformerLogic;
-import crystal.block.logic.TerraleecherLogic;
+import crystal.block.logic.*;
 
 public class Terraformer extends BlockContainer
 {
@@ -31,6 +30,7 @@ public class Terraformer extends BlockContainer
         switch (metadata)
         {
         case 3: return new TerraleecherLogic();
+        case 4: return new TerragrowerLogic();
         }
         return new TerraformerLogic();
     }

@@ -19,12 +19,13 @@ public class CrystalContent
     public static Block terraformer;
     
     public static Block ash;
+    public static Block ashBlock;
     public static Block finiteWater;
     public static Block leechedStone;
     
     public static Fluid finiteWaterFluid;
     
-    public static Item essenceCrystal;
+    public static EssenceCrystal essenceCrystal;
     public static ItemStack essenceStack;
     
     public static void CreateContent()
@@ -38,9 +39,13 @@ public class CrystalContent
         GameRegistry.registerBlock(terraformer, TerraformerItem.class, "terraformer");
         GameRegistry.registerTileEntity(TerraformerLogic.class, "Terraformer");
         GameRegistry.registerTileEntity(TerraleecherLogic.class, "Terraleecher");
+        GameRegistry.registerTileEntity(TerragrowerLogic.class, "Terragrower");
         
-        ash = new Ash(PHCrystal.ash).setUnlocalizedName("ash").setTextureName("crystal:ash");
+        ash = new Ash(PHCrystal.ash).setHardness(0.1F).setStepSound(Block.soundSandFootstep).setUnlocalizedName("ash").setTextureName("crystal:ash");
         GameRegistry.registerBlock(ash, "ash");
+        ashBlock = new Block(PHCrystal.ashBlock, Material.sand).setHardness(0.2F).setStepSound(Block.soundSandFootstep).setUnlocalizedName("stone.leeched")
+                .setCreativeTab(CrystalClimate.tab).setTextureName("crystal:ash");
+        GameRegistry.registerBlock(ashBlock, "ashBlock");
         
         finiteWaterFluid = new Fluid("water.finite");
         if (!FluidRegistry.registerFluid(finiteWaterFluid))
@@ -53,7 +58,7 @@ public class CrystalContent
         leechedStone = new Block(PHCrystal.leechedStone, Material.rock).setHardness(3F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("stone.leeched")
                 .setCreativeTab(CrystalClimate.tab).setTextureName("crystal:leechedstone");
         //Items
-        essenceCrystal = new EssenceCrystal(PHCrystal.essenceCrystal).setUnlocalizedName("crystal.essence");
+        essenceCrystal = (EssenceCrystal) new EssenceCrystal(PHCrystal.essenceCrystal).setUnlocalizedName("crystal.essence");
         essenceStack = new ItemStack(essenceCrystal);
     }
 }

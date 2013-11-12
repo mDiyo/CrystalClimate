@@ -11,6 +11,7 @@ import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -65,11 +66,15 @@ public class EssenceCrystal extends Item
         }
     }
 
+    //Need to load in icons from somewhere
+    public Icon leafIcon;
+
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons (IconRegister iconRegister)
     {
         this.itemIcon = iconRegister.registerIcon("crystal:material_essencecrystal");
+        this.leafIcon = iconRegister.registerIcon("crystal:leaf");
     }
 
     @Override

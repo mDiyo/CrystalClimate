@@ -32,8 +32,9 @@ public class PHCrystal
         terraformer = config.getBlock("Terraformer", 2851).getInt(2851);
         essenceExtractor = config.getBlock("Essence Extractor", 2852).getInt(2852);
         ash = config.getBlock("Ash", 2853).getInt(2853);
-        finiteWater = config.getBlock("Finite Water", 2854).getInt(2854);
-        leechedStone = config.getBlock("Leeched Stone", 2855).getInt(2855);
+        ashBlock = config.getBlock("Ash Block", 2854).getInt(2854);
+        finiteWater = config.getBlock("Finite Water", 2855).getInt(2855);
+        leechedStone = config.getBlock("Leeched Stone", 2856).getInt(2856);
         
         essenceCrystal = config.getItem("Patterns and Misc", "Essence Crystal", 18571).getInt(18571);
     }
@@ -42,6 +43,7 @@ public class PHCrystal
     public static int essenceExtractor;
     public static int terraformer;
     public static int ash;
+    public static int ashBlock;
     public static int finiteWater;
     public static int leechedStone;
     

@@ -5,6 +5,7 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
+import crystal.CrystalClimate;
 import crystal.CrystalContent;
 
 public class TerraformerLogic extends TileEntity
@@ -46,6 +47,8 @@ public class TerraformerLogic extends TileEntity
                     worldObj.spawnParticle("enchantmenttable", xCoord + random.nextFloat() * 25 - 12, yCoord + random.nextFloat() * 10, zCoord + random.nextFloat() * 25 - 12, 0, -1, 0);
                 break;
             case 4: //Grower
+                for (int i = 0; i < 16; i++)
+                    CrystalClimate.proxy.spawnParticle("leaf", xCoord + random.nextFloat() * 25 - 12, yCoord + random.nextFloat() * 10, zCoord + random.nextFloat() * 25 - 12, 0, 0, 0);
                 break;
             case 5: //Nether
                 for (int i = 0; i < 40; i++)
@@ -155,8 +158,10 @@ public class TerraformerLogic extends TileEntity
         else if (block == CrystalContent.ash)
         {
             int meta = worldObj.getBlockMetadata(x, y, z);
-            if (meta < 7)
+            if (meta < 6)
                 worldObj.setBlockMetadataWithNotify(x, y, z, meta + 1, 3);
+            else if (meta == 6)
+                worldObj.setBlock(x, y, z, CrystalContent.ashBlock.blockID);
         }
         else if (block == null || block.isBlockReplaceable(worldObj, x, y, z))
         {
