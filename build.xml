@@ -6,7 +6,7 @@
 	<property name="build.dir" value="build"/>
 	<property name="src.dir" value="src"/>
 	<property name="resources.dir" value="resources"/>
-    <property name="mantle.src.dir" value="Mantle/src"/>
+	<property name="mantle.src.dir" value="Mantle/src"/>
 
 	<property name="download.dir" value="download"/>
 
@@ -21,8 +21,8 @@
 	<property name="mc.version" value="1.6.4"/>
 	<property name="forge.version" value="9.11.0.880"/>
 
-    <property name="version.major" value="0"/>
-    <property name="version.minor" value="0"/>
+	<property name="version.major" value="0"/>
+	<property name="version.minor" value="0"/>
 
 	<property name="forge.name" value="minecraftforge-src-${mc.version}-${forge.version}.zip"/>
 
@@ -150,15 +150,15 @@
 		</exec>
 
 		<!-- Copy classes -->
-        <mkdir dir="${classes.dir}/cclimate"/>
-		<copy todir="${classes.dir}/cclimate">
-			<fileset dir="${mcp.dir}/reobf/minecraft/cclimate"/>
+		<mkdir dir="${classes.dir}/crystal"/>
+		<copy todir="${classes.dir}/crystal">
+			<fileset dir="${mcp.dir}/reobf/minecraft/crystal"/>
 		</copy>
 
 		<!-- Copy resources -->
 		<copy todir="${classes.dir}" outputencoding="UTF-8">
 			<fileset dir="${classes.dir}">
-				<include name="assets/cclimate/lang/*"/>
+				<include name="assets/crystal/lang/*"/>
 			</fileset>
 		</copy>
 		<copy file="${resources.dir}/mcmod.info" todir="${classes.dir}" outputencoding="UTF-8">
@@ -174,14 +174,13 @@
 		</copy>
 
 		<!-- Reset src dir to post-forge-install state -->
-		<delete dir="${mcpsrc.dir}/minecraft/cclimate"/>
-        <delete dir="${mcpsrc.dir}/minecraft/mantle"/>
+		<delete dir="${mcpsrc.dir}/minecraft/crystal"/>
+		<delete dir="${mcpsrc.dir}/minecraft/mantle"/>
 
 	</target>
 
 	<!-- Package the compiled files -->
 	<target name="package" depends="reobf">
-
 		<delete dir="${jar.dir}"/>
 		<mkdir dir="${jar.dir}"/>
 		<jar destfile="${jar.dir}/CClimate-${mc.version}-${project.version.full}.jar" basedir="${classes.dir}"/>
