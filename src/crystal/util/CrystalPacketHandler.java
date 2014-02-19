@@ -5,8 +5,6 @@ import java.io.DataInputStream;
 import java.io.IOException;
 import java.util.Random;
 
-import tconstruct.TConstruct;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.network.INetworkManager;
@@ -59,7 +57,7 @@ public class CrystalPacketHandler implements IPacketHandler
         }
         catch (IOException e)
         {
-            TConstruct.logger.warning("Failed at reading client packet for Crystal Climate.");
+            System.out.println("Failed at reading client packet for Crystal Climate.");
             e.printStackTrace();
         }
     }
