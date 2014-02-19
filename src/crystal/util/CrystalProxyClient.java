@@ -3,20 +3,28 @@ package crystal.util;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.EntityFX;
-import net.minecraft.client.particle.EntitySmokeFX;
+import net.minecraft.client.renderer.RenderBlocks;
+import net.minecraft.client.renderer.Tessellator;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
-import crystal.CrystalContent;
-import crystal.particle.LeafFX;
+
+import org.lwjgl.opengl.GL11;
+import cpw.mods.fml.client.registry.RenderingRegistry;
+
+import crystal.*;
+import crystal.client.*;
+import crystal.particle.*;
+import crystal.particle.*;
 
 public class CrystalProxyClient extends CrystalProxy
 {
     public CrystalProxyClient()
     {
         MinecraftForge.EVENT_BUS.register(this);
+        RenderingRegistry.registerBlockHandler(new CrystalBlockRender());
     }
 
     @ForgeSubscribe
@@ -67,9 +75,11 @@ public class CrystalProxyClient extends CrystalProxy
                     entityfx = new LeafFX(mc.theWorld, par2, par4, par6, CrystalContent.essenceCrystal.leafIcon);
                 }
 
-                else if (par1Str.equals("smoke"))
+                else if (par1Str.equals("essence"))
                 {
-                    entityfx = new EntitySmokeFX(mc.theWorld, par2, par4, par6, par8, par10, par12);
+                    entityfx = new EssenceFX(mc.theWorld, par2, par4, par6, par8, par10, par12);
+                    ((EntityFX) entityfx).setParticleTextureIndex(82);
+                    ((EntityFX) entityfx).setRBGColorF(1.0F, 1.0F, 1.0F);
                 }
 
                 if (entityfx != null)
@@ -85,5 +95,36 @@ public class CrystalProxyClient extends CrystalProxy
         {
             return null;
         }
+    }
+    
+    public static void renderStandardInvBlock (RenderBlocks renderblocks, Block block, int meta)
+    {
+        Tessellator tessellator = Tessellator.instance;
+        GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
+        tessellator.startDrawingQuads();
+        tessellator.setNormal(0.0F, -1F, 0.0F);
+        renderblocks.renderFaceYNeg(block, 0.0D, 0.0D, 0.0D, block.getIcon(0, meta));
+        tessellator.draw();
+        tessellator.startDrawingQuads();
+        tessellator.setNormal(0.0F, 1.0F, 0.0F);
+        renderblocks.renderFaceYPos(block, 0.0D, 0.0D, 0.0D, block.getIcon(1, meta));
+        tessellator.draw();
+        tessellator.startDrawingQuads();
+        tessellator.setNormal(0.0F, 0.0F, -1F);
+        renderblocks.renderFaceZNeg(block, 0.0D, 0.0D, 0.0D, block.getIcon(2, meta));
+        tessellator.draw();
+        tessellator.startDrawingQuads();
+        tessellator.setNormal(0.0F, 0.0F, 1.0F);
+        renderblocks.renderFaceZPos(block, 0.0D, 0.0D, 0.0D, block.getIcon(3, meta));
+        tessellator.draw();
+        tessellator.startDrawingQuads();
+        tessellator.setNormal(-1F, 0.0F, 0.0F);
+        renderblocks.renderFaceXNeg(block, 0.0D, 0.0D, 0.0D, block.getIcon(4, meta));
+        tessellator.draw();
+        tessellator.startDrawingQuads();
+        tessellator.setNormal(1.0F, 0.0F, 0.0F);
+        renderblocks.renderFaceXPos(block, 0.0D, 0.0D, 0.0D, block.getIcon(5, meta));
+        tessellator.draw();
+        GL11.glTranslatef(0.5F, 0.5F, 0.5F);
     }
 }

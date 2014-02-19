@@ -1,0 +1,23 @@
+itemGroup.crystalclimate=Crystal Climate
+
+tile.extractor.essence.name=Essence Extractor
+
+tile.terraformer.freezer.name=Bum Freezer
+tile.terraformer.fumer.name=Bum Frier
+tile.terraformer.waver.name=Seasickness Inducer
+tile.terraformer.leecher.name=Landlubber Creator
+tile.terraformer.grower.name=Seaweed Grower
+tile.terraformer.nether.name=Hell's Gate
+tile.terraformer.lighter.name=Sunshine Peeler
+tile.terraformer.crystal.name=Treasure Trove
+
+tile.aggregator.redstone.name=Redstone Aggroator
+
+tile.ash.name=Ash
+tile.stone.leeched.name=Lubbed Ore
+tile.sugar.name=Lump o' Sugar
+
+item.crystal.essence.name=Purified Essence Crystal
+
+tooltip.aggregator.redstone=Place atop a pyramid of sugar cubes
+tooltip.crystalvalue=Crystal Value

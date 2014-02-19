@@ -1,11 +1,12 @@
 package crystal.block.logic;
 
+import java.text.DecimalFormat;
+import java.util.Random;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntityEnchantmentTable;
-
-import java.text.DecimalFormat;
-import java.util.Random;
+import crystal.CrystalClimate;
 
 public class EssenceExtractorLogic extends TileEntityEnchantmentTable
 {
@@ -75,6 +76,22 @@ public class EssenceExtractorLogic extends TileEntityEnchantmentTable
     public void updateEntity ()
     {
         super.updateEntity();
+        if (worldObj.isRemote)
+            particles();
+        bookRotation();
+    }
+
+    void particles ()
+    {
+        for (int i = 0; i < 1; i++)
+        {
+            float xPos = rand.nextFloat() * 3 - 1, yPos = rand.nextFloat() * 2, zPos = rand.nextFloat() * 3 - 1;
+            CrystalClimate.proxy.spawnParticle("essence", xCoord + xPos, yCoord + yPos, zCoord + zPos, (xPos-0.5)*0.05, 0.1, (zPos-0.5)*0.05);
+        }
+    }
+
+    void bookRotation ()
+    {
         this.bookSpreadPrev = this.bookSpread;
         this.bookRotationPrev = this.bookRotation2;
         EntityPlayer entityplayer = this.worldObj.getClosestPlayer((double) ((float) this.xCoord + 0.5F), (double) ((float) this.yCoord + 0.5F), (double) ((float) this.zCoord + 0.5F), 3.0D);

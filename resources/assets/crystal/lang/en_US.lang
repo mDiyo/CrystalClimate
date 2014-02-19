@@ -11,7 +11,13 @@ tile.terraformer.nether.name=Terranether
 tile.terraformer.lighter.name=Terralighter
 tile.terraformer.crystal.name=Terracrystal
 
+tile.aggregator.redstone.name=Redstone Aggregator
+
 tile.ash.name=Ash
 tile.stone.leeched.name=Leeched Ore
+tile.sugar.name=Sugar Cube
 
 item.crystal.essence.name=Purified Essence Crystal
+
+tooltip.aggregator.redstone=Place atop a pyramid of sugar cubes
+tooltip.crystalvalue=Crystal Value

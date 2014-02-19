@@ -73,7 +73,7 @@ public class EssenceCrystal extends Item
     @SideOnly(Side.CLIENT)
     public void registerIcons (IconRegister iconRegister)
     {
-        this.itemIcon = iconRegister.registerIcon("crystal:material_essencecrystal");
+        this.itemIcon = iconRegister.registerIcon("crystal:crystal_essence");
         this.leafIcon = iconRegister.registerIcon("crystal:leaf");
     }
 

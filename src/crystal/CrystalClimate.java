@@ -9,7 +9,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import crystal.util.*;
 
-@Mod(modid = "CrystalClimate", name = "CrystalClimate", version = "Aron")
+@Mod(modid = "CrystalClimate", name = "CrystalClimate", version = "Byakuren")
 @NetworkMod(serverSideRequired = false, clientSideRequired = true)
 public class CrystalClimate
 {
