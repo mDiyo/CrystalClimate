@@ -28,6 +28,7 @@ public class PHCrystal
         }
 
         Configuration config = new Configuration(newFile);
+        config.load();
         
         terraformer = config.getBlock("Terraformer", 2851).getInt(2851);
         essenceExtractor = config.getBlock("Essence Extractor", 2852).getInt(2852);
@@ -40,6 +41,8 @@ public class PHCrystal
         sugarBlock = config.getBlock("Sugar Block", 2859).getInt(2859);        
         
         essenceCrystal = config.getItem("Patterns and Misc", "Essence Crystal", 18571).getInt(18571);
+        
+        config.save();
     }
     
 
