@@ -41,9 +41,9 @@ public class CrystalContent
 
         terraformer = new Terraformer(PHCrystal.terraformer).setHardness(50f).setUnlocalizedName("terraformer");
         GameRegistry.registerBlock(terraformer, TerraformerItem.class, "terraformer");
-        GameRegistry.registerTileEntity(TerraformerLogic.class, "Terraformer");
-        GameRegistry.registerTileEntity(TerraleecherLogic.class, "Terraleecher");
-        GameRegistry.registerTileEntity(TerragrowerLogic.class, "Terragrower");
+        GameRegistry.registerTileEntity(TerraformerLogic.class, "Crystal:Terraformer");
+        GameRegistry.registerTileEntity(TerraleecherLogic.class, "Crystal:Terraleecher");
+        GameRegistry.registerTileEntity(TerragrowerLogic.class, "Crystal:Terragrower");
         
         aggregator = new Aggregator(PHCrystal.aggregator).setHardness(10f).setUnlocalizedName("aggregator.redstone");
         GameRegistry.registerBlock(aggregator, AggregatorItem.class, "aggregator");
@@ -51,7 +51,7 @@ public class CrystalContent
         
         crystalBlock = new CrystalBlock(PHCrystal.crystalBlock).setHardness(1.0f).setUnlocalizedName("crystal");
         GameRegistry.registerBlock(crystalBlock, CrystalBlockItem.class, "crystalblock");
-        GameRegistry.registerTileEntity(CrystalLogic.class, "crystallogic");
+        GameRegistry.registerTileEntity(CrystalLogic.class, "Crystal:Crystallogic");
         
         ash = new Ash(PHCrystal.ash).setHardness(0.1F).setStepSound(Block.soundSandFootstep).setUnlocalizedName("ash").setTextureName("crystal:ash");
         GameRegistry.registerBlock(ash, "ash");

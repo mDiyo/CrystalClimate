@@ -62,7 +62,6 @@ public class Terraformer extends BlockContainer
     @SideOnly(Side.CLIENT)
     public Icon[] icons;
 
-    @SideOnly(Side.CLIENT)
     static String[] textureNames = { "crystal_machine_top", "terrafreezer", "terrafumer", "terrawaver", "terraleecher", "terragrower", "terranether", "terralighter", "terracrystal" };
 
     @Override
