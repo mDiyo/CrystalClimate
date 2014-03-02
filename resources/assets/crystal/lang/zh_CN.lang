@@ -1,0 +1,17 @@
+itemGroup.crystalclimate=生态水晶
+
+tile.extractor.essence.name=精华萃取机
+
+tile.terraformer.freezer.name=地形改造:冰雪之地
+tile.terraformer.fumer.name=地形改造:烟熏之地
+tile.terraformer.waver.name=地形改造:波涌之地
+tile.terraformer.leecher.name=地形改造:嗜血之地
+tile.terraformer.grower.name=地形改造:生长之地
+tile.terraformer.nether.name=地形改造:下界之地
+tile.terraformer.lighter.name=地形改造:燃火之地
+tile.terraformer.crystal.name=地形改造:水晶之地
+
+tile.ash.name=灰烬
+tile.stone.leeched.name=嗜血矿石
+
+item.crystal.essence.name=提纯精华水晶
