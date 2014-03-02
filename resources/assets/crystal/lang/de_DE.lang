@@ -11,7 +11,13 @@ tile.terraformer.nether.name=Terranether
 tile.terraformer.lighter.name=Terraleuchter
 tile.terraformer.crystal.name=Terrakristall
 
+tile.aggregator.redstone.name=Redstone-Aggregator
+
 tile.ash.name=Asche
 tile.stone.leeched.name=Gesogenes Erz
+tile.sugar.name=Zuckerwürfel
 
 item.crystal.essence.name=Purifizierter Essenzkristall
+
+tooltip.aggregator.redstone=Platziere auf der Spitze einer Pyramide aus Zuckerwürfeln
+tooltip.crystalvalue=Kristallwert
